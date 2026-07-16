@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pré-visualização — Descubra Matias Barbosa</title>
+<meta name="description" content="Pré-visualização estática do template de turismo Descubra Matias Barbosa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  /* Aviso — apenas na pré-visualização (não faz parte do template) */
+  .preview-flag{background:#F2B01E;color:#10203c;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.82rem;padding:8px 16px}
+  .preview-flag b{text-transform:uppercase;letter-spacing:.08em}
+
+  /* Emulação do carrossel — SÓ na pré-visualização.
+     No portal real o BannerBox usa o Embla, que já fornece este comportamento. */
+  .embla__viewport{overflow:hidden}
+  .embla__container{display:flex;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+  .embla__slide{flex:0 0 100%}
+  .embla__dot{border:0;padding:0;cursor:pointer}
+  @media (prefers-reduced-motion:reduce){ .embla__container{transition:none} }
+</style>
+</head>
+<body>
+<div class="preview-flag"><b>Pré-visualização estática</b> — imagens são placeholders; no portal o conteúdo vem dos boxes (MateriaBox / BannerBox). </div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Conteúdo à direita; a faixa de pictogramas (bg-top.webp) ocupa a esquerda -->
+          <div class="topo-conteudo">
+            <div class="top-social">
+              <ul>
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+            <ul class="acessibilidade">
+              <li><a accesskey="1" href="#main">Ir para o conteúdo <span>1</span></a></li>
+              <li><a accesskey="2" href="#menunavegacao">Ir para o menu <span>2</span></a></li>
+              <li><a accesskey="3" href="#busca-avancada-box-input">Ir para a busca <span>3</span></a></li>
+              <li><a accesskey="4" href="#footer">Ir para o rodapé <span>4</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="faixa4" aria-hidden="true"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><div></div></div>
+  <div class="header-bottom" id="header-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-6">
+          <div class="logo"><a href="#" aria-label="Prefeitura Municipal de Matias Barbosa — página inicial"><img class="brand-logo" src="images/logo.webp" alt="Prefeitura Municipal de Matias Barbosa — Administração 2025/2028"></a></div>
+        </div>
+        <div class="col-lg-9 col-6 menu-topo">
+          <!-- réplica do MenuPortal (nav#menunavegacao > ul.navbar-nav > li.nav-item > a.nav-link) -->
+          <nav class="py-2 navbar navbar-expand-lg nav-primary-portal" id="menunavegacao">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-portal-main" aria-label="Abrir menu"><i class="bi bi-list"></i></button>
+            <div class="collapse navbar-collapse" id="navbar-portal-main">
+              <ul class="navbar-nav container justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#o-que-fazer">O que fazer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#onde-comer">Onde comer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#onde-ficar">Onde ficar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Roteiros</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- réplica do BuscaAvancadaBox -->
+          <div class="busca-avancada-box">
+            <form onsubmit="return false">
+              <label class="d-none" for="busca-avancada-box-input">Buscar</label>
+              <input id="busca-avancada-box-input" type="text" placeholder="O que você procura?">
+              <button id="busca-avancada-box-button" type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero: réplica do BannerBox slider -->
+  <section class="hero-area" id="hero">
+    <div class="banner-box">
+      <div class="banner-box-slider">
+        <div class="embla">
+          <div class="embla__viewport">
+            <div class="embla__container">
+              <div class="embla__slide is-selected">
+                <div class="embla__slide__inner">
+                  <div class="banner-box-slider-item">
+                    <a href="#">
+                      <img class="banner-img" src="images/fotos/hero-1-letreiro.jpg" alt="Letreiro Matias Barbosa sob a árvore centenária, ao entardecer">
+                      <h3 class="banner-title">Bem-vindo a Matias Barbosa</h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__slide__inner">
+                  <div class="banner-box-slider-item">
+                    <a href="#">
+                      <img class="banner-img" src="images/fotos/hero-2-aerea.jpg" alt="Vista aérea de Matias Barbosa com a BR-040 e as serras da Zona da Mata">
+                      <h3 class="banner-title">Portal da Zona da Mata</h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__slide__inner">
+                  <div class="banner-box-slider-item">
+                    <a href="#">
+                      <img class="banner-img" src="images/fotos/hero-3-painel.jpg" alt="Vista aérea do Centro com o rio Paraibuna e a ferrovia">
+                      <h3 class="banner-title">O vale do Paraibuna</h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="embla__dots">
+            <button class="embla__dot is-selected" aria-label="Ir para o slide 1"></button>
+            <button class="embla__dot" aria-label="Ir para o slide 2"></button>
+            <button class="embla__dot" aria-label="Ir para o slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pictograma único, discreto (escadaria) — sem mosaico, não compete com o título -->
+    <span class="pict pict--1 pict--c pict-hero" aria-hidden="true"></span>
+  </section>
+</header>
+
+<!-- ================= ACESSO RÁPIDO ================= -->
+<nav class="acesso-rapido" aria-label="Acesso rápido">
+  <div class="container">
+    <a class="chip-acesso chip--verde" href="#"><span class="ico"><i class="fas fa-route"></i></span> Roteiros</a>
+    <a class="chip-acesso chip--azul" href="#"><span class="ico"><i class="fas fa-map-location-dot"></i></span> Mapa turístico</a>
+    <a class="chip-acesso chip--amarelo" href="#"><span class="ico"><i class="fas fa-bed"></i></span> Onde ficar</a>
+    <a class="chip-acesso chip--vermelho" href="#"><span class="ico"><i class="fas fa-calendar-day"></i></span> Agenda</a>
+    <a class="chip-acesso chip--azul" href="#"><span class="ico"><i class="fas fa-list-check"></i></span> Serviços ao Cidadão</a>
+    <a class="chip-acesso chip--verde" href="#"><span class="ico"><i class="fas fa-chart-line"></i></span> Transparência</a>
+  </div>
+</nav>
+
+<main class="main" id="main" role="main">
+
+  <!-- 01 · O QUE FAZER -->
+  <section class="secao sec-oquefazer reveal" id="o-que-fazer">
+    <div class="container">
+      <div class="section-headding">
+        <div class="heading-left">
+          <span class="sec-kicker"><span class="num">01</span> O que fazer</span>
+          <h2>Tem de tudo em <span class="accent">Matias Barbosa</span></h2>
+        </div>
+        <a href="#" class="ver-todos">Ver todos os atrativos <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="materia-box">
+        <div class="materia-box-static">
+          <div class="list-group">
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/igreja-matriz.jpg" alt="Fachada amarela da Igreja Matriz Nossa Senhora da Conceição"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Igreja Matriz N. Sra. da Conceição</h4></div>
+              <p class="materia-box-headline">Centenária, no coração do Centro.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/ponte-liberdade.jpg" alt="Arco de pedra da Ponte da Liberdade sob o céu estrelado"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Ponte da Liberdade</h4></div>
+              <p class="materia-box-headline">Arco de pedra da era ferroviária.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/santuario-caaro.jpg" alt="Santuário do Caaró à noite, sob a Via Láctea"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Santuário do Caaró</h4></div>
+              <p class="materia-box-headline">Céu estrelado e silêncio na roça.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/capela-rosario.jpg" alt="Capela do Rosário, em branco e azul"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Capela do Rosário</h4></div>
+              <p class="materia-box-headline">Patrimônio e fé em azul e branco.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/penha-centro.jpg" alt="Vista da Nossa Senhora da Penha para o Centro"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Mirante da Penha</h4></div>
+              <p class="materia-box-headline">A cidade inteira aos seus pés.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/centro-mb.jpg" alt="Vista do Centro de Matias Barbosa"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Centro &amp; Memória</h4></div>
+              <p class="materia-box-headline">Um passeio pela história da cidade.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · ONDE FICAR -->
+  <section class="secao secao--warm sec-ondeficar reveal" id="onde-ficar">
+    <div class="container">
+      <div class="section-headding">
+        <div class="heading-left">
+          <span class="sec-kicker"><span class="num">02</span> Onde ficar</span>
+          <h2>Estadias <span class="accent">memoráveis</span></h2>
+        </div>
+        <a href="#" class="ver-todos">Ver todos os hotéis <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="materia-box">
+        <div class="materia-box-static">
+          <div class="list-group">
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/hotel-castelinho.jpg" alt="Área de lazer do Hotel Fazenda Castelinho, com piscina e guarda-sóis"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Hotel Fazenda Castelinho</h4></div>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/pousada-lago-pedras.jpg" alt="Fachada amarela da Pousada Lago das Pedras, entre jardim e palmeiras"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Pousada Lago das Pedras</h4></div>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/haras-morena.jpg" alt="Haras Morena Resort visto do gramado, com piscina em frente ao prédio"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Haras Morena Resort</h4></div>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/sitio-jolimont.jpg" alt="Lago cercado de árvores no Sítio Jolimont Pousada Rural"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Sítio Jolimont Pousada Rural</h4></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · ONDE COMER E BEBER -->
+  <section class="secao sec-gastronomia reveal" id="onde-comer">
+    <div class="container">
+      <div class="section-headding">
+        <div class="heading-left">
+          <span class="sec-kicker"><span class="num">03</span> Onde comer e beber</span>
+          <h2>Sabores das <span class="accent">Geraes</span></h2>
+        </div>
+        <a href="#" class="ver-todos">Ver todos os estabelecimentos <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="materia-box">
+        <div class="materia-box-static">
+          <div class="list-group">
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/refugio-gastronomico.jpg" alt="Prato de feijão tropeiro com tilápia servido no Refúgio Gastronômico"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Refúgio Gastronômico</h4></div>
+              <p class="materia-box-headline">Feijão tropeiro com tilápia.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/cabana-matiense.jpg" alt="Buffet com panelas de ferro sobre o fogão a lenha, no Restaurante Cabana Matiense"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Restaurante Cabana Matiense</h4></div>
+              <p class="materia-box-headline">Comida mineira no fogão a lenha.</p>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/cervejaria-antuerpia.jpg" alt="Tanques de fermentação em inox da Cervejaria Antuérpia"></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Cervejaria Antuérpia</h4></div>
+              <p class="materia-box-headline">Cerveja artesanal feita na cidade.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · EVENTOS -->
+  <section class="secao secao--dark sec-eventos reveal" id="eventos">
+    <div class="container">
+      <div class="section-headding">
+        <div class="heading-left">
+          <span class="sec-kicker"><span class="num">04</span> Acontece na cidade</span>
+          <h2>O que está <span class="accent">rolando</span> na cidade</h2>
+        </div>
+        <a href="#" class="ver-todos">Agenda completa <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="materia-box">
+        <div class="materia-box-static">
+          <div class="list-group">
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/ev-capela-praca.jpg" alt="Capela histórica branca e azul, com bandeiras hasteadas no adro de pedra"></div>
+              <div class="materia-box-static-caption"><div class="d-flex w-100 justify-content-between"><span class="data"><i class="bi bi-calendar3 icon-data"></i> 12 de jul</span></div></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Feira de Artesanato &amp; Sabores</h4></div>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/ev-cachoeira.jpg" alt="Cachoeira descendo por paredão de pedra em meio à Mata Atlântica"></div>
+              <div class="materia-box-static-caption"><div class="d-flex w-100 justify-content-between"><span class="data"><i class="bi bi-calendar3 icon-data"></i> 19 de jul</span></div></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Trilha Guiada na Mata Atlântica</h4></div>
+            </a>
+            <a class="materia-box-static-item list-group-item list-group-item-action flex-column align-items-start" href="#">
+              <div class="d-flex materia-box-static-image"><img src="images/fotos/ev-igreja-noite.jpg" alt="Vista aérea noturna da Igreja Matriz iluminada, no centro da cidade"></div>
+              <div class="materia-box-static-caption"><div class="d-flex w-100 justify-content-between"><span class="data"><i class="bi bi-calendar3 icon-data"></i> 26 de jul</span></div></div>
+              <div class="d-flex mb-1 materia-box-static-title"><h4>Missa &amp; Festa da Padroeira</h4></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div class="foot-picos" aria-hidden="true"><span style="background:var(--azul)"></span><span style="background:var(--verde)"></span><span style="background:var(--amarelo)"></span><span style="background:var(--vermelho)"></span></div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-lg-4 foot-brand">
+        <span class="eu-amo">Eu <i class="fas fa-heart"></i> Matias Barbosa</span>
+        <p>Promovendo Matias Barbosa como destino turístico da Zona da Mata mineira — natureza, história ferroviária e acolhimento.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h4>Explorar</h4>
+        <ul class="foot-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#o-que-fazer">O que fazer</a></li>
+          <li><a href="#onde-comer">Onde comer e beber</a></li>
+          <li><a href="#onde-ficar">Onde ficar</a></li>
+          <li><a href="#">Serviços</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>O que fazer</h4>
+        <ul class="foot-list">
+          <li><a href="#">Atrativos</a></li>
+          <li><a href="#">Roteiros</a></li>
+          <li><a href="#eventos">Agenda</a></li>
+          <li><a href="#">Mapa turístico</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-3">
+        <h4>Secretaria de Turismo</h4>
+        <ul class="foot-list">
+          <li><i class="fas fa-map-marker-alt"></i> Av. Cardoso Saraiva, 305 — Centro</li>
+          <li><i class="fas fa-phone-alt"></i> (32) 3771-0100</li>
+          <li><i class="fas fa-envelope"></i> turismo@matiasbarbosa.mg.gov.br</li>
+          <li><i class="fas fa-clock"></i> Seg. a sex., 08h às 17h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>Prefeitura Municipal de Matias Barbosa © <span id="displayYear"></span> — Todos os direitos reservados.</p>
+      <ul>
+        <li><a href="#">LGPD</a></li>
+        <li><a href="#">Acessibilidade</a></li>
+        <li><a href="#">Mapa do site</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a id="scroll-area" class="scroll-area" href="#header" aria-label="Voltar ao topo"><i class="fas fa-angle-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js" defer></script>
+<script>
+/* Carrossel do hero — SÓ na pré-visualização (no portal o Embla faz isso) */
+(function(){
+  var track = document.querySelector('.hero-area .embla__container');
+  var slides = document.querySelectorAll('.hero-area .embla__slide');
+  var dots = document.querySelectorAll('.hero-area .embla__dot');
+  if(!track || slides.length < 2) return;
+  var i = 0, timer = null;
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function ir(n){
+    i = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    slides.forEach(function(s,k){ s.classList.toggle('is-selected', k === i); });
+    dots.forEach(function(d,k){ d.classList.toggle('is-selected', k === i); });
+  }
+  function tocar(){ if(reduz) return; parar(); timer = setInterval(function(){ ir(i+1); }, 6000); }
+  function parar(){ if(timer) clearInterval(timer); }
+
+  dots.forEach(function(d,k){ d.addEventListener('click', function(){ ir(k); tocar(); }); });
+  var hero = document.querySelector('.hero-area');
+  hero.addEventListener('mouseenter', parar);
+  hero.addEventListener('mouseleave', tocar);
+  ir(0); tocar();
+})();
+</script>
+</body>
+</html>
